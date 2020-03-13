@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<body>
+<div>
+<input id="a"/>
+<button onclick="javascript:encode();">Encode</button>
+</div>
+<p id="b"/>
+<script>
+function encode(){
+document.getElementById("b").innerHTML=btoa(document.getElementById("a").value));
+}
+</script>
+</body>
+</html>
