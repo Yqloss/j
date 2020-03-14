@@ -5,7 +5,7 @@
 <script>
 var b64=window.location.href.split('?')[1];
 if(b64[0]==="-"){
-document.getElementById("str").innerHTML=atob(b64.split("-")[1]);
+document.getElementById("str").innerHTML=decodeURIComponent(atob(b64.split("-")[1]));
 }
 else{
 window.location.href=atob(b64);
