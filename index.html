@@ -4,14 +4,14 @@
 <h1 id="str"></h1>
 <script>
 function URLtoB64(str){
-str=str.split("AA").join("AA");
+str=str.split("AA").join("A");
 str=str.split("AB").join("+");
 str=str.split("AC").join("/");
 str=str.split("AD").join("-");
 str=str.split("AE").join("=");
 return str;
 }
-var b64=URLtoB64(window.location.href.split('?')[1].split("=")[0]);
+var b64=URLtoB64(window.location.href.split('?')[1].split("=")[1].split("&")[0]);
 if(b64[0]==="-"){
 document.getElementById("str").innerHTML=decodeURIComponent(atob(b64.split("-")[1]));
 }
