@@ -4,11 +4,11 @@
 <h1 id="str"/>
 <script>
 function URLtoB64(str){
-str.replace(new RegExp("AA","g"),"A");
-str.replace(new RegExp("AB","g"),"+");
-str.replace(new RegExp("AC","g"),"/");
-str.replace(new RegExp("AD","g"),"-");
-str.replace(new RegExp("AE","g"),"=");
+str=str.split("AA").join("AA");
+str=str.split("AB").join("+");
+str=str.split("AC").join("/");
+str=str.split("AD").join("-");
+str=str.split("AE").join("=");
 return str;
 }
 var b64=URLtoB64(window.location.href.split('?')[1]);
