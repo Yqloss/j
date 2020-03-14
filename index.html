@@ -1,8 +1,15 @@
 <!doctype html>
 <html>
-<head>
+<body>
+<h1 id="str"/>
 <script>
-window.location.href=atob(window.location.href.split('?')[1]);
+var b64=window.location.href.split('?')[1];
+if(b64[0]==="-"){
+document.getElementById("str").innerHTML=atob(b64.split("-")[1]);
+}
+else{
+window.location.href=atob(b64);
+}
 </script>
-</head>
+</body>
 </html>
