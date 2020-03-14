@@ -17,6 +17,7 @@ var b64;
 for(var i=0;i<len;i++){
 if(i%2===0&&arg[i]==="s")b64=URLtoB64(arg[i+1]);
 }
+if(b64[0]==="-"){
 document.getElementById("str").innerHTML=decodeURIComponent(atob(b64.split("-")[1]));
 }
 else{
