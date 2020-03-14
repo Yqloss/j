@@ -3,7 +3,14 @@
 <body>
 <h1 id="str"/>
 <script>
-var b64=window.location.href.split('?')[1];
+function URLtoB64(str){
+str.replace("AA","A");
+str.replace("AB","+");
+str.replace("AC","/");
+str.replace("AD","-");
+return str;
+}
+var b64=URLtoB64(window.location.href.split('?')[1]);
 if(b64[0]==="-"){
 document.getElementById("str").innerHTML=decodeURIComponent(atob(b64.split("-")[1]));
 }
