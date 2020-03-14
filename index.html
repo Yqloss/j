@@ -11,7 +11,7 @@ str=str.split("AD").join("-");
 str=str.split("AE").join("=");
 return str;
 }
-var b64=URLtoB64(window.location.href.split('?')[1]);
+var b64=URLtoB64(window.location.href.split('?')[1].split("=")[0]);
 if(b64[0]==="-"){
 document.getElementById("str").innerHTML=decodeURIComponent(atob(b64.split("-")[1]));
 }
